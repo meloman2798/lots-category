@@ -16,7 +16,7 @@ class MainController extends Component
     public function render()
     {
         return view('livewire.main-controller',[
-            'products' => $this->getAll(),
+            'products' => $this->getAllProducts(),
             'categories' => $this->getCategory()
         ]);
     }
@@ -26,12 +26,12 @@ class MainController extends Component
         $this->selectedCategories = $data;
     }
 
-    public function getCategory()
+    public function getCategory(): \Illuminate\Database\Eloquent\Collection
     {
         return Category::all();
     }
 
-    public function getAll()
+    public function getAllProducts(): \Illuminate\Database\Eloquent\Collection|array
     {
         return Product::query()
             ->with('category')

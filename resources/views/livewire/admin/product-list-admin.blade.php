@@ -57,14 +57,14 @@
             @endforelse
             </tbody>
         </table>
-        {{--        <div class="pagination-wrap pt-3 d-flex align-items-baseline users-paginate mb-5">--}}
-        {{--            {{ $invoices->links() }}--}}
-        {{--            <select class="form-select form-select-sm ms-5" style="width: 6%;!important;" wire:model="selectPerPage">--}}
-        {{--                @foreach($perPage as $item)--}}
-        {{--                    <option value="{{$item}}">{{$item}}</option>--}}
-        {{--                @endforeach--}}
-        {{--            </select>--}}
-        {{--        </div>--}}
+                <div class="pagination-wrap pt-3 d-flex align-items-baseline users-paginate mb-5">
+                    {{ $products->links() }}
+                    <select class="form-select form-select-sm ms-5" style="width: 6%;!important;" wire:model="selectPerPage">
+                        @foreach($perPage as $item)
+                            <option value="{{$item}}">{{$item}}</option>
+                        @endforeach
+                    </select>
+                </div>
     </div>
     <livewire:admin.products-form-admin/>
 </div>

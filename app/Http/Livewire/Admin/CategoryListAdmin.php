@@ -32,7 +32,7 @@ class CategoryListAdmin extends Component
     }
 
 
-    public function getCategories($perPage)
+    public function getCategories($perPage): \Illuminate\Contracts\Pagination\LengthAwarePaginator
     {
         return Category::query()->paginate($perPage);
     }

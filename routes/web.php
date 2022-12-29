@@ -26,7 +26,6 @@ Route::get('/products-panel', function () {
 })->name('product-form');
 
 
-
 Route::get('/{categorySlug}', function () {
     return view('components.category');
 })->name('selectCategory');
