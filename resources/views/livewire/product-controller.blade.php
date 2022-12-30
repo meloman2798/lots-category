@@ -10,6 +10,7 @@
                 <div class="col-6">
                     <div class="wrap-product-data">
                         <h3 class="text-dark text-center fs-4 mb-3">{{$product->name}}</h3>
+                        <h5 class="text-dark text-center fs-4 mb-3">${{$product->price}}</h5>
                         <p class="card-text">{{$product->description ?? ''}}</p>
                     </div>
                 </div>
